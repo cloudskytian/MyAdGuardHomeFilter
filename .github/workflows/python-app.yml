@@ -26,8 +26,10 @@ jobs:
     - name: Run filters.py
       run: |
         python filters.py
-    - name: Commit Files
+    - name: Commit Filed
       run: |
+        echo `date`>update
+        git add updated
         git add filters.txt
         git config --global user.email ${{secrets.USER_EMAIL}}
         git config --global user.name ${{secrets.USER_NAME}}
